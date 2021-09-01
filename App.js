@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { Focus } from './src/features/focus/Focus';
 
 export default function App() {
   const [focusSubject, setFocusSubject] = useState(null);
@@ -9,7 +10,7 @@ export default function App() {
       {focusSubject ? (
         <Text>Here is where Im going to build a timer</Text>
       ) : (
-        <Text>Here Im going to build an input for a subject</Text>
+        <Focus />
       )}
     </View>
   );
@@ -18,6 +19,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 50,
+    backgroundColor: '#252250',
   },
 });

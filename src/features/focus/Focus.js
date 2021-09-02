@@ -9,8 +9,8 @@ export const Focus = () => {
       <View style={styles.titleContainer}>
         <Text style={styles.title}>What would you like to focus on?</Text>
         <View style={styles.inputContainer}>
-          <TextInput />
-          <RoundedButton />
+          <TextInput style={{ flex: 1, marginRight: 20 }} />
+          <RoundedButton size={50} title='+' />
         </View>
       </View>
     </View>
@@ -33,5 +33,6 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     paddingTop: 20,
+    flexDirection: 'row',
   },
 });

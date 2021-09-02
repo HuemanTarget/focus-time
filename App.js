@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Focus } from './src/features/focus/Focus';
+import { Timer } from './src/features/timer/Timer';
 import { colors } from './src/utils/colors';
 
 export default function App() {
@@ -8,11 +9,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      {focusSubject ? (
-        <Text>Here is where Im going to build a timer</Text>
-      ) : (
-        <Focus addSubject={setFocusSubject} />
-      )}
+      {focusSubject ? <Timer /> : <Focus addSubject={setFocusSubject} />}
       <Text>{focusSubject}</Text>
     </View>
   );

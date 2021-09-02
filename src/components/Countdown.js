@@ -8,9 +8,7 @@ const formatTime = (time) => (time < 10 ? `0${time}` : time);
 
 export const Countdown = ({ minutes = 1, isPaused, onProgress }) => {
   const interval = useRef(null);
-  const [milliseconds, setMilliseconds] = useState(
-    minutesToMilliseconds(minutes)
-  );
+  const [milliseconds, setMilliseconds] = useState(null);
   const minutesRevert = Math.floor(milliseconds / 1000 / 60) % 60;
   const seconds = Math.floor(milliseconds / 1000) % 60;
 
@@ -27,7 +25,12 @@ export const Countdown = ({ minutes = 1, isPaused, onProgress }) => {
   };
 
   useEffect(() => {
+    setMilliseconds(minutesToMilliseconds(minutes));
+  }, [minutes]);
+
+  useEffect(() => {
     if (isPaused) {
+      if (interval.current) clearInterval(interval.current);
       return;
     }
     interval.current = setInterval(countDown, 1000);

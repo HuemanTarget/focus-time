@@ -2764,7 +2764,7 @@
     "expo-modules-core" "~0.2.0"
     "fontfaceobserver" "^2.1.0"
 
-"expo-keep-awake@~9.2.0":
+"expo-keep-awake@^9.2.0", "expo-keep-awake@~9.2.0":
   "integrity" "sha512-R5jAx5j3MqrhKFB307FBpaHtYSYeVIFX/rVforBF5inKonYjXRWVhjGoBjolF4geAryNamC3NKhMfxyaaB0W6Q=="
   "resolved" "https://registry.npmjs.org/expo-keep-awake/-/expo-keep-awake-9.2.0.tgz"
   "version" "9.2.0"
